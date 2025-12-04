@@ -1,0 +1,120 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Raw tables from TheLook eCommerce dataset
+    database: thelook
+    schema: public
+    tables:
+      - name: orders
+        description: Order records
+        columns:
+          - name: id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Order status
+            tests:
+              - accepted_values:
+                  values: ['Completed', 'Returned', 'Cancelled', 'Processing', 'Shipped']
+      
+      - name: order_items
+        description: Individual items within orders
+        columns:
+          - name: id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: order_id
+            description: Foreign key to orders
+            tests:
+              - not_null
+          - name: product_id
+            description: Foreign key to products
+            tests:
+              - not_null
+      
+      - name: products
+        description: Product catalog
+        columns:
+          - name: id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+      
+      - name: users
+        description: Customer records
+        columns:
+          - name: id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+
+models:
+  - name: stg_orders
+    description: Staging model for orders
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['Completed', 'Returned', 'Cancelled', 'Processing', 'Shipped']
+  
+  - name: stg_order_items
+    description: Staging model for order items
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+  
+  - name: stg_products
+    description: Staging model for products
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+  
+  - name: stg_users
+    description: Staging model for users
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+  
+  - name: dim_product
+    description: Product dimension table
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+  
+  - name: dim_customer
+    description: Customer dimension table
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+  
+  - name: fct_order_items
+    description: Fact table for order items with joins to dimensions
+    columns:
+      - name: order_item_id
+        tests:
+          - unique
+          - not_null
+      - name: is_returned
+        description: Boolean flag indicating if item was returned
+
