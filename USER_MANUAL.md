@@ -155,10 +155,6 @@ The dashboard displays four key metric cards at the top, each showing important 
 
 The simulator helps you predict return probability for new products before launch.
 
-![Simulator Overview](docs/images/simulator-overview.png)
-
-*Figure 3: New Drop Risk Simulator interface*
-
 #### How to Use
 
 1. Navigate to the Simulator page from the dashboard or use the link in the "Next Step" card

@@ -8,9 +8,8 @@ Please add the following screenshots to this directory:
 
 1. **dashboard-overview.png** - Full dashboard view showing all metrics and charts
 2. **dashboard-metrics.png** - Close-up of the four metric cards
-3. **simulator-overview.png** - Full simulator page view
-4. **simulator-form.png** - Product details input form
-5. **simulator-results.png** - Prediction results card
+3. **simulator-form.png** - Product details input form
+4. **simulator-results.png** - Prediction results card
 
 ## Image Guidelines
 
