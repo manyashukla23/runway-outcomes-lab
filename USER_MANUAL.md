@@ -107,7 +107,17 @@ Runway Outcomes Lab is a full-stack fashion analytics platform that helps you an
 
 The dashboard provides a comprehensive view of your fashion business metrics:
 
+![Dashboard Overview](docs/images/dashboard-overview.png)
+
+*Figure 1: Collections Analytics Dashboard showing key metrics and charts*
+
 #### Key Metrics Cards
+
+The dashboard displays four key metric cards at the top, each showing important business indicators:
+
+![Metric Cards](docs/images/dashboard-metrics.png)
+
+*Figure 2: Key metric cards showing Total Revenue, Return Rate, and Top Categories*
 
 1. **Total Revenue**: Sum of all completed order sales
 2. **Overall Return Rate**: Percentage of items returned across all categories
@@ -145,11 +155,20 @@ The dashboard provides a comprehensive view of your fashion business metrics:
 
 The simulator helps you predict return probability for new products before launch.
 
+![Simulator Overview](docs/images/simulator-overview.png)
+
+*Figure 3: New Drop Risk Simulator interface*
+
 #### How to Use
 
 1. Navigate to the Simulator page from the dashboard or use the link in the "Next Step" card
 
-2. Fill in the product details:
+2. Fill in the product details in the form:
+
+![Simulator Form](docs/images/simulator-form.png)
+
+*Figure 4: Product details input form*
+
    - **Category**: Product category (e.g., Dresses, Shoes, Tops)
    - **Brand**: Brand name
    - **Department**: Women, Men, Kids, or Accessories
@@ -158,14 +177,19 @@ The simulator helps you predict return probability for new products before launc
    - **Customer Age**: Target customer age
    - **Customer Country**: Target market country code (e.g., US, UK)
 
-3. Click **"Predict New Drop Risk"**
+3. Click **"Predict New Drop Risk"** button
 
-4. Review the results:
+4. Review the results displayed in the prediction card:
+
+![Prediction Results](docs/images/simulator-results.png)
+
+*Figure 5: Prediction results showing return probability and risk assessment*
+
    - **Return Probability**: Percentage chance of return (0-100%)
    - **Risk Label**: 
-     - **Low**: < 30% return probability
-     - **Medium**: 30-50% return probability
-     - **High**: > 50% return probability
+     - **Low**: < 30% return probability (Green indicator)
+     - **Medium**: 30-50% return probability (Amber/Yellow indicator)
+     - **High**: > 50% return probability (Red indicator)
    - **Visual Progress Bar**: Color-coded risk indicator
    - **Recommendations**: Contextual advice based on risk level
 
